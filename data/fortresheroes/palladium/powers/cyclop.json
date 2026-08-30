@@ -1,0 +1,125 @@
+{
+    "name": "Cyclop",
+    "persistent_data": true,
+     "damage_multiplier": 2,
+    "background": "minecraft:textures/block/red_wool.png",
+    "icon": "fortresheroes:textures/icons/cyclop_suit.png",
+    "gui_display_type": "tree",
+    "abilities": {
+        "laser": {
+            "type": "palladium:energy_beam",
+            "icon": "fortresheroes:textures/icons/cyclop_1eye.png",
+            "title": "Лазерные Глаза",
+            "bar_color": "red",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 0,
+            "gui_position": "null",
+            "description": "Стреляйте Лазерами Из Глаз",
+            "energy_beam": "fortresheroes:cyclop_laser",
+            "damage_type": "null",
+            "damage": 18,
+            "max_distance": 70,
+            "speed": 0.5,
+            "set_on_fire_seconds": 2,
+            "cause_fire": false,
+            "smelt_blocks": false,
+            "commands_on_block_hit": [],
+            "commands_on_entity_hit": [],
+"energy_bar_usage": {
+"energy_bar": "energy_bar_cyclop",
+"amount": 0
+},
+            "conditions": {
+                "enabling": [
+                        {
+                            "type": "palladium:toggle",
+                            "cooldown": 0,
+                            "key_type": "key_bind",
+                            "needs_empty_hand": false,
+                            "allow_scrolling_when_crouching": true
+                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "blind": {
+            "type": "powerborne:give_effect",
+            "icon": "minecraft:barrier",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "effect": "minecraft:blindness",
+            "duration": 2000000,
+            "amplifier": 20,
+            "clear_on_disable": true,
+            "ambient": false,
+            "show_particles": false,
+            "reset_duration": 3,
+            "conditions": {
+                "enabling": [
+{
+"type": "palladium:not",
+"conditions": [
+
+{
+"type": "palladium:ability_enabled",
+"power": "cyclop",
+"ability": "laser"
+}
+
+]
+}
+                ],
+                "unlocking": []
+            }
+        },
+        "blindness": {
+            "type": "palladium:command",
+            "icon": "minecraft:command_block",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "effect clear @s"
+            ],
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_enabled",
+                                            "power": "null",
+                                            "ability": "laser"
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+"beam_sound": {
+    "beam_loop_sound": {
+      "type": "palladium:play_sound",
+      "hidden": true,
+      "sound": "powerborne:heat_vision_loop_st",
+      "volume": 0.5,
+      "looping": true,
+      "play_self": true,
+      "play_others": false,
+      "conditions": {
+        "enabling": {
+          "type": "palladium:ability_enabled",
+          "ability": "laser"
+            }
+        }
+            }
+        }
+        }
+    }

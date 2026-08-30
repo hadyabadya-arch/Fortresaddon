@@ -1,0 +1,13 @@
+{
+    "pack": {
+        "id": "fortresheroes",
+        "pack_format": 15,
+        "description": "Add Marvel & Dc Heroes",
+        "version": "1.0.0"
+    },
+    "dependencies": {
+        "common": {},
+        "fabric": {},
+        "forge": {}
+    }
+}

@@ -1,0 +1,599 @@
+{
+    "name": "Cyclop",
+    "persistent_data": true,
+     "damage_multiplier": 2,
+    "background": "minecraft:textures/block/red_wool.png",
+    "icon": "fortresheroes:textures/icons/cyclop_suit.png",
+    "gui_display_type": "tree",
+            "energy_bars": {
+   "energy_bar": {
+       "max": 1200,
+       "auto_increase_per_tick": 0,
+       "auto_increase_interval": 55,
+       "color": "#E41212",
+    "energy_bar_usage": {
+   "energy_bar": "energy_bar",
+   "amount": 60,
+   "conditions": {
+   "unlocking": {
+      "type": "palladium:energy_bar",
+      "energy_bar": "energy_bar",
+      "min": 0
+   }
+}
+}
+   }
+},
+    "abilities": {
+        "laser": {
+            "type": "palladium:energy_beam",
+            "icon": "fortresheroes:textures/icons/cyclop_shoot.png",
+            "title": "Лазерные Глаза",
+            "bar_color": "red",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 0,
+            "gui_position": [0, 0.75],
+            "description": "Стреляйте Лазерами Из Глаз",
+            "energy_beam": "fortresheroes:cyclop_laser",
+            "damage_type": "null",
+            "damage": 12,
+            "max_distance": 70,
+            "speed": 0.5,
+            "set_on_fire_seconds": 2,
+            "cause_fire": false,
+            "smelt_blocks": false,
+            "commands_on_block_hit": [],
+            "commands_on_entity_hit": [],
+"energy_bar_usage": {
+"energy_bar": "energy_bar",
+"amount": -1
+},
+            "conditions": {
+                "enabling": [
+            {
+                "type": "palladium:held",
+                "cooldown": 200,
+                "key_type": "key_bind",
+                "needs_empty_hand": false
+            }
+                ],
+                "unlocking": []
+            }
+        },
+        "beam_sound": {
+    "laser_sound": {
+      "type": "palladium:play_sound",
+      "hidden": true,
+      "sound": "powerborne:heat_vision_loop_st",
+      "volume": 0.5,
+      "looping": true,
+      "play_self": true,
+      "play_others": false,
+      "conditions": {
+        "enabling": {
+          "type": "palladium:ability_enabled",
+          "ability": "laser"
+            }
+        }
+    }
+},
+"armor": {
+    "type": "palladium:attribute_modifier",
+    "icon": "fortresheroes:textures/icons/defense.png",
+    "title": "Защита",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": [-1, 0.75],
+    "description": "Станьте Крепче",
+    "attribute": "minecraft:generic.armor",
+    "amount": 0,
+    "operation": 0,
+    "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+    "conditions": {
+        "enabling": [],
+        "unlocking": []
+    }
+},
+"cyclop": {
+    "type": "palladium:dummy",
+    "icon": "fortresheroes:textures/icons/cyclop_suit.png",
+    "title": "Циклоп",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": [0, 0],
+    "description": "Вы Стали Циклопом",
+    "conditions": {
+        "enabling": [],
+        "unlocking": []
+    }
+},
+"damage": {
+    "type": "palladium:attribute_modifier",
+    "icon": "fortresheroes:textures/icons/damage.png",
+    "title": "Наносимый Урон",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": [1, 0.75],
+    "description": "Начните Бить Сильнее",
+    "attribute": "minecraft:generic.attack_damage",
+    "amount": 3,
+    "operation": 0,
+    "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+    "conditions": {
+        "enabling": [],
+        "unlocking": []
+    }
+},
+    "sentry_healing": {
+      "type": "palladium:healing",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "frequency": 60,
+      "amount": 1
+    },
+    "speed": {
+        "type": "palladium:attribute_modifier",
+        "icon": "minecraft:iron_boots",
+        "title": "null",
+        "bar_color": "light_gray",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "list_index": -1,
+        "gui_position": "null",
+        "description": "null",
+        "attribute": "minecraft:generic.movement_speed",
+        "amount": 0.05,
+        "operation": 0,
+        "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+        "conditions": {
+            "enabling": [],
+            "unlocking": []
+        }
+    },
+    "jump":{
+        "type": "palladium:attribute_modifier",
+        "icon": "minecraft:iron_chestplate",
+        "title": "null",
+        "bar_color": "light_gray",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "list_index": -1,
+        "gui_position": "null",
+        "description": "null",
+        "attribute": "palladium:jump_power",
+        "amount": 0.5,
+        "operation": 0,
+        "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+        "conditions": {
+            "enabling": [],
+            "unlocking": []
+        }
+    },
+    "fall": {
+        "type": "palladium:attribute_modifier",
+        "icon": "minecraft:iron_chestplate",
+        "title": "null",
+        "bar_color": "light_gray",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "list_index": -1,
+        "gui_position": "null",
+        "description": "null",
+        "attribute": "palladium:fall_resistance",
+        "amount": 3,
+        "operation": 0,
+        "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+        "conditions": {
+            "enabling": [],
+            "unlocking": []
+        }
+    },
+    "chain_lightning": {
+      "type": "palladium:projectile",
+      "hidden": false,
+      "title": "Цепной Выстрел",
+      "list_index": 1,
+    "gui_position": [0, 1.5],
+    "description": "Стреляйте Зарядом Отскакивающим От Врагов",
+      "icon": "fortresheroes:textures/icons/chain_laser.png",
+      "entity_type": "palladium:custom_projectile",
+      "velocity": 2,
+      "swinging_arm": "none",
+      "ignore_player_movement": true,
+      "entity_data": {
+        "NoPhysics": true,
+        "Damage": 7,
+        "Gravity": 0,
+        "Size": -0.65,
+        "Lifetime": 25,
+        "DieOnEntityHit": false,
+        "DieOnBlockHit": false,
+        "Tags": [
+          "powerborne.chain_lightning"
+        ],
+        "Appearances": [
+          {
+            "Type": "trail",
+            "Trail": "fortresheroes:cyclop_projectile_trail"
+          }
+        ]
+      },
+          "energy_bar_usage": {
+   "energy_bar": "energy_bar",
+   "amount": -75
+},
+      "conditions": {
+        "enabling": {
+          "type": "palladium:action",
+          "cooldown": 120
+        },
+        "unlocking": []
+      }
+        },
+        "skin_layer": {
+            "type": "palladium:render_layer",
+            "icon": "minecraft:blaze_rod",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "render_layer": "fortresheroes:cyclop_skin",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "chain_sound": {
+            "type": "palladium:play_sound",
+            "icon": "minecraft:blaze_rod",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "sound": "powerborne:chain_lightning_hit",
+            "volume": 1,
+            "pitch": 1,
+            "looping": false,
+            "play_self": false,
+            "play_others": false,
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:ability_enabled",
+                                            "power": "null",
+                                            "ability": "chain_lightning"
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "power_remover": {
+            "type": "palladium:command",
+            "icon": "minecraft:command_block",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "first_tick_commands": [
+                "superpower remove fortresheroes:cyclop_w_visor @s"
+            ],
+            "last_tick_commands": [],
+            "commands": [],
+            "conditions": {
+                "enabling": [
+{
+"type": "palladium:not",
+"conditions": [
+    {
+        "type": "palladium:item_in_slot",
+        "item": {
+            "item": "fortresheroes:cyclop_suit"
+        },
+        "slot": "chest"
+    }
+]
+}
+                ],
+                "unlocking": []
+            }
+        },
+    "xray_animation": {
+      "type": "palladium:animation_timer",
+      "hidden": true,
+      "icon": {
+        "type": "palladium:texture",
+        "texture": "powerborne:textures/gui/abilities/superman/xray_vision.png"
+      },
+      "title": {
+        "translate": "ability.powerborne.superman.xray_vision"
+      },
+      "hidden_in_bar": true,
+      "max_value": 10,
+      "conditions": {
+        "enabling": {
+          "type": "palladium:activation",
+          "ticks": 60,
+          "cooldown": 140
+        },
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": {
+              "type": "palladium:ability_on_cooldown",
+              "ability": "xray_animation"
+            }
+          },
+          {
+            "type": "palladium:not",
+            "conditions": {
+              "type": "palladium:has_effect",
+              "effect": "powerborne:solar_exhaustion"
+            }
+          }
+        ]
+      }
+    },
+    "xray_eyes": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "powerborne:xray_eyes",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:ability_enabled",
+          "ability": "xray_animation"
+        }
+      }
+    },
+    "xray_glow": {
+      "type": "palladium:entity_glow",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "mode": "others",
+      "distance": 50,
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 3,
+          "max": 10
+        }
+      }
+    },
+    "xray_vision_sound": {
+      "type": "palladium:command",
+      "hidden": true,
+      "first_tick_commands": [
+        "playsound powerborne:xray_vision player @s"
+      ],
+      "commands": "",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:ability_enabled",
+          "ability": "xray_animation"
+        }
+      }
+    },
+    "xray_shader_1": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_1.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 1,
+          "max": 1
+        }
+      }
+    },
+    "xray_shader_2": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_2.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 2,
+          "max": 2
+        }
+      }
+    },
+    "xray_shader_3": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_3.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 3,
+          "max": 3
+        }
+      }
+    },
+    "xray_shader_4": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_4.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 4,
+          "max": 4
+        }
+      }
+    },
+    "xray_shader_5": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_5.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 5,
+          "max": 5
+        }
+      }
+    },
+    "xray_shader_6": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_6.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 6,
+          "max": 6
+        }
+      }
+    },
+    "xray_shader_7": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_7.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 7,
+          "max": 7
+        }
+      }
+    },
+    "xray_shader_8": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_8.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 8,
+          "max": 8
+        }
+      }
+    },
+    "xray_shader_9": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_9.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 9,
+          "max": 9
+        }
+      }
+    },
+    "xray_shader_10": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_10.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 10,
+          "max": 10
+    }
+}
+        },
+"wheel": {
+"type": "palladium:ability_wheel",
+"title": "Колесо Способностей",
+"icon": {
+"type": "palladium:texture",
+"texture": "fortresheroes:textures/icons/xmen_logo.png"
+},
+"list_index": 2,
+ "gui_position": [1, 1.5],
+ "description": "Получите Ночное Зрение И Видите Сущностей Сквозь Стены С Помощью Своего Визора",
+"hidden": false,
+"hidden_in_bar": false,
+"abilities": [
+"xray_animation",
+"night_vision"
+],
+"conditions": {
+"enabling": {
+"type": "palladium:held"
+},
+"unlocking": [
+{
+"type": "palladium:not",
+"conditions": {
+    "type": "palladium:has_effect",
+    "effect": "powerborne:solar_exhaustion"
+}
+}
+]
+}
+    },
+        "respiration": {
+      "type": "powerborne:respiration",
+      "hidden": true,
+      "multiplier": 10
+    },
+    "night_vision": {
+      "type": "palladium:command",
+      "icon": {
+        "type": "palladium:texture",
+        "texture": "minecraft:textures/mob_effect/night_vision.png"
+      },
+      "title": {
+        "translate": "effect.minecraft.night_vision"
+      },
+      "hidden": true,
+      "hidden_in_bar": true,
+      "last_tick_commands": "effect clear @s minecraft:night_vision",
+      "commands": "effect give @s minecraft:night_vision infinite 0 true",
+      "first_tick_commands": "",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle"
+          }
+        ],
+        "unlocking": {
+          "type": "palladium:not",
+          "conditions": {
+            "type": "palladium:has_effect",
+            "effect": "powerborne:solar_exhaustion"
+          }
+        }
+      }
+    }
+        }
+    }

@@ -1,0 +1,48 @@
+[
+    {
+        "type": "palladium:laser",
+        "body_part": "head",
+        "glow_color": "#DB1414",
+        "core_color": "#DB1414",
+        "rainbow": false,
+        "glow_opacity": 1,
+        "core_opacity": 1,
+        "bloom": 1,
+        "size": 2,
+        "normal_transparency": false,
+        "rotation": 0,
+        "rotation_speed": 0,
+        "visibility": {
+            "first_person": true,
+            "third_person": true
+                },
+        "offset": [
+            -1.4,
+            3.7,
+            1
+        ]
+    },
+        {
+        "type": "palladium:laser",
+        "body_part": "head",
+        "glow_color": "#DB1414",
+        "core_color": "#DB1414",
+        "rainbow": false,
+        "glow_opacity": 1,
+        "core_opacity": 1,
+        "bloom": 1,
+        "size": 2,
+        "normal_transparency": false,
+        "rotation": 0,
+        "rotation_speed": 0,
+        "visibility": {
+            "first_person": true,
+            "third_person": true
+                },
+        "offset": [
+            1.4,
+            3.7,
+            1
+        ]
+    }
+]

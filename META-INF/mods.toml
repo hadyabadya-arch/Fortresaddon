@@ -1,0 +1,21 @@
+modLoader="lowcodefml"
+showAsResourcePack = false
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="fortresheroes"
+version="1.0.0"
+logoFile = "logo.png"
+logoBlur = false
+displayName="Fortres's Addon"
+description='''
+Add Marvel & Dc Heroes
+'''
+
+[[dependencies.fortresheroes]]
+modId = "palladium"
+mandatory = true
+versionRange = "[4.5.8,)"
+ordering = "NONE"
+side = "BOTH"

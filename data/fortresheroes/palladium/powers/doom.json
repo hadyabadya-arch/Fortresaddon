@@ -1,0 +1,1035 @@
+{
+    "name": "Doom",
+    "persistent_data": true,
+     "damage_multiplier": 2,
+    "background": "minecraft:textures/block/green_wool.png",
+    "icon": "fortresheroes:textures/icons/doom_icon.png",
+    "gui_display_type": "tree",
+    "energy_bars": {
+   "energy_bar": {
+       "max": 1200,
+       "auto_increase_per_tick": 20,
+       "auto_increase_interval": 55,
+       "color": "#23CA4D",
+       "energy_bar_usage": {
+   "energy_bar": "energy_bar",
+   "amount": 60,
+   "conditions": {
+   "unlocking": {
+      "type": "palladium:energy_bar",
+      "energy_bar": "energy_bar",
+      "min": 0
+   }
+}
+}
+   }
+},
+    "abilities": {
+"dual_electro_beam": {
+    "type": "palladium:energy_beam",
+    "icon": "fortresheroes:textures/icons/dual_doom_beam.png",
+    "title": "Двойной Энерго-Луч",
+    "bar_color": "lime",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 1,
+    "gui_position": [-1, 0.75],
+    "description": "Стреляет Двумя Электро Лучами Из Рук",
+    "energy_beam": "fortresheroes:dual_doom_beam",
+    "damage_type": "null",
+    "damage": 16,
+    "max_distance": 40,
+    "speed": 0.5,
+    "set_on_fire_seconds": 0,
+    "cause_fire": true,
+    "smelt_blocks": false,
+    "commands_on_block_hit": [],
+    "commands_on_entity_hit": [],
+    "energy_bar_usage": {
+   "energy_bar": "energy_bar",
+   "amount": 0
+},
+    "conditions": {
+        "enabling": [
+    {
+        "type": "palladium:held",
+        "cooldown": 200,
+        "key_type": "right_click",
+        "needs_empty_hand": true
+    },
+{
+"type": "palladium:energy_bar",
+"power": "null",
+"energy_bar": "energy_bar",
+"min": 0,
+"max": 1200
+}
+        ],
+        "unlocking": []
+    }
+},
+"Name_change": {
+    "type": "palladium:name_change",
+    "icon": "minecraft:blaze_rod",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "name": {
+        "text": "Doctor Doom"
+    },
+    "conditions": {
+        "enabling": [],
+        "unlocking": []
+    }
+},
+"skin_render_layer": {
+    "type": "palladium:render_layer",
+    "icon": "minecraft:blaze_rod",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "render_layer": "fortresheroes:doomskin",
+    "conditions": {
+        "enabling": [],
+        "unlocking": []
+    }
+},
+"flight": {
+    "type": "palladium:attribute_modifier",
+    "icon": "minecraft:iron_chestplate",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "attribute": "minecraft:generic.flying_speed",
+    "amount": 3,
+    "operation": 1,
+    "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+    "conditions": {
+        "enabling": [],
+        "unlocking": []
+    }
+},
+"flight2": {
+    "type": "palladium:attribute_modifier",
+    "icon": "minecraft:iron_chestplate",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "attribute": "palladium:flight_speed",
+    "amount": 3,
+    "operation": 0,
+    "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+    "conditions": {
+        "enabling": [],
+        "unlocking": []
+    }
+},
+"strenght": {
+    "type": "palladium:attribute_modifier",
+    "icon": "fortresheroes:textures/icons/damage.png",
+    "title": "Наносимый Урон",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": [1, 1.5],
+    "description": "+4.5 Наносимый Урон",
+    "attribute": "minecraft:generic.attack_damage",
+    "amount": 4.5,
+    "operation": 0,
+    "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+    "conditions": {
+        "enabling": [],
+        "unlocking": []
+    }
+},
+"fall": {
+    "type": "palladium:attribute_modifier",
+    "icon": "minecraft:iron_chestplate",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": false,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "attribute": "palladium:fall_resistance",
+    "amount": 17,
+    "operation": 0,
+    "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+    "conditions": {
+        "enabling": [],
+        "unlocking": []
+    }
+},
+"armor": {
+    "type": "palladium:attribute_modifier",
+    "icon": "fortresheroes:textures/icons/defense.png",
+    "title": "Защита",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": -1,
+    "gui_position": [0, 1.5],
+    "description": "+20 Единиц Брони",
+    "attribute": "minecraft:generic.armor",
+    "amount": 20,
+    "operation": 0,
+    "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+    "conditions": {
+        "enabling": [],
+        "unlocking": []
+    }
+},
+"health": {
+    "type": "palladium:attribute_modifier",
+    "icon": "fortresheroes:textures/icons/heart.png",
+    "title": "Здоровье",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": -1,
+    "gui_position": [-1, 1.5],
+    "description": "+10 Сердец",
+    "attribute": "minecraft:generic.max_health",
+    "amount": 20,
+    "operation": 0,
+    "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+    "conditions": {
+        "enabling": [],
+        "unlocking": []
+    }
+},
+"step": {
+    "type": "palladium:attribute_modifier",
+    "icon": "minecraft:iron_chestplate",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": false,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "attribute": "palladium:flight_flexibility",
+    "amount": 10,
+    "operation": 0,
+    "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+    "conditions": {
+        "enabling": [],
+        "unlocking": []
+    }
+},
+"doom_aura": {
+    "type": "palladium:render_layer",
+    "icon": "minecraft:blaze_rod",
+    "title": "Doom Aura",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "render_layer": "fortresheroes:doom_aura",
+    "conditions": {
+        "enabling": [],
+        "unlocking": []
+    }
+},
+"teleport": {
+    "type": "powerborne:teleport",
+    "icon": "fortresheroes:textures/icons/teleport1.png",
+    "title": "Телепортация",
+    "bar_color": "purple",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 0,
+    "gui_position": [0, 2.25],
+    "description": "Телепортирует вас на смотримую точку",
+    "max_distance": 120,
+        "energy_bar_usage": {
+   "energy_bar": "energy_bar",
+   "amount": 0
+},
+    "conditions": {
+        "enabling": [
+            {
+                "type": "palladium:action",
+                "cooldown": 140,
+                "key_type": "key_bind",
+                "needs_empty_hand": false,
+                "allow_scrolling_when_crouching": true
+            }
+        ],
+        "unlocking": [
+                    {
+                     "type": "palladium:energy_bar",
+                     "power": "null",
+                     "energy_bar": "energy_bar",
+                     "min": 0,
+                     "max": 1200
+                    }
+        ]
+    }
+},
+"knockback": {
+    "type": "palladium:attribute_modifier",
+    "icon": "minecraft:iron_chestplate",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": false,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "attribute": "minecraft:generic.attack_knockback",
+    "amount": 2,
+    "operation": 0,
+    "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+    "conditions": {
+        "enabling": [],
+        "unlocking": []
+    }
+},
+"beam_sound": {
+    "beam_loop_sound": {
+      "type": "palladium:play_sound",
+      "hidden": true,
+      "sound": "powerborne:sentry_beam_loop_st",
+      "volume": 0.5,
+      "looping": true,
+      "play_self": true,
+      "play_others": false,
+      "conditions": {
+        "enabling": {
+          "type": "palladium:ability_enabled",
+          "ability": "dual_electro_beam"
+    }
+}
+        }
+},
+"aim": {
+      "type": "palladium:aim",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "arm": "both",
+      "time": 4,
+      "conditions": {
+        "enabling": {
+          "type": "palladium:ability_enabled",
+          "ability": "dual_electro_beam"
+    }
+}
+},
+"speed": {
+    "type": "palladium:attribute_modifier",
+    "icon": "fortresheroes:textures/icons/speed.png",
+    "title": "Суперскорость",
+    "bar_color": "lime",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 3,
+    "gui_position": [0, 0.75],
+    "description": "Позволяет бегать быстрее",
+    "attribute": "minecraft:generic.movement_speed",
+    "amount": 2,
+    "operation": 0,
+    "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+    "conditions": {
+        "enabling": [
+                        {
+                            "type": "palladium:activation",
+                            "cooldown": 200,
+                            "ticks": 200,
+                            "key_type": "key_bind",
+                            "needs_empty_hand": false,
+                            "allow_scrolling_when_crouching": true
+                        }
+        ],
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": {
+              "type": "palladium:is_hovering_or_flying"
+            }
+          }
+        ]
+    }
+},
+"step_height": {
+    "type": "palladium:attribute_modifier",
+    "icon": "minecraft:iron_chestplate",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": false,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "attribute": "forge:step_height_addition",
+    "amount": 2,
+    "operation": 0,
+    "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+    "conditions": {
+        "enabling": [
+{
+    "type": "palladium:ability_enabled",
+    "power": "null",
+    "ability": "speed"
+}
+        ],
+        "unlocking": []
+    }
+},
+    "sentry_healing": {
+      "type": "palladium:healing",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "frequency": 20,
+      "amount": 2
+    },
+        "damage_immunity": {
+      "type": "palladium:damage_immunity",
+"icon": "fortresheroes:textures/icons/immunitet.png",
+"title": "Иммунитет",
+      "hidden": false,
+  "gui_position": [-1, 2.25],
+  "description": "Перестаньте Получать Урон От Падения, Стрел и Огня",
+      "damage_sources": [
+        "powerborne:doom_immune_to",
+        "powerborne:is_ad_astra",
+        "minecraft:is_projectile",
+        "minecraft:is_fire",
+        "minecraft:is_fall"
+      ]
+},
+"doom": {
+    "type": "palladium:dummy",
+    "icon": "fortresheroes:textures/icons/doom_icon.png",
+    "title": "Доктор Дум",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": [0, 0],
+    "description": "Вы Стали Думом!",
+    "conditions": {
+        "enabling": [],
+        "unlocking": []
+    }
+},
+    "xray_animation": {
+      "type": "palladium:animation_timer",
+      "hidden": true,
+      "icon": {
+        "type": "palladium:texture",
+        "texture": "powerborne:textures/gui/abilities/superman/xray_vision.png"
+      },
+      "title": {
+        "translate": "ability.powerborne.superman.xray_vision"
+      },
+      "hidden_in_bar": true,
+      "max_value": 10,
+      "conditions": {
+        "enabling": {
+          "type": "palladium:activation",
+          "ticks": 60,
+          "cooldown": 140
+        },
+        "unlocking": [
+          {
+            "type": "palladium:not",
+            "conditions": {
+              "type": "palladium:ability_on_cooldown",
+              "ability": "xray_animation"
+            }
+          },
+          {
+            "type": "palladium:not",
+            "conditions": {
+              "type": "palladium:has_effect",
+              "effect": "powerborne:solar_exhaustion"
+            }
+          }
+        ]
+      }
+    },
+    "xray_eyes": {
+      "type": "palladium:render_layer",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "render_layer": "powerborne:xray_eyes",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:ability_enabled",
+          "ability": "xray_animation"
+        }
+      }
+    },
+    "xray_glow": {
+      "type": "palladium:entity_glow",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "mode": "others",
+      "distance": 50,
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 3,
+          "max": 10
+        }
+      }
+    },
+    "xray_vision_sound": {
+      "type": "palladium:command",
+      "hidden": true,
+      "first_tick_commands": [
+        "playsound powerborne:xray_vision player @s"
+      ],
+      "commands": "",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:ability_enabled",
+          "ability": "xray_animation"
+        }
+      }
+    },
+    "xray_shader_1": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_1.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 1,
+          "max": 1
+        }
+      }
+    },
+    "xray_shader_2": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_2.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 2,
+          "max": 2
+        }
+      }
+    },
+    "xray_shader_3": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_3.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 3,
+          "max": 3
+        }
+      }
+    },
+    "xray_shader_4": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_4.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 4,
+          "max": 4
+        }
+      }
+    },
+    "xray_shader_5": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_5.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 5,
+          "max": 5
+        }
+      }
+    },
+    "xray_shader_6": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_6.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 6,
+          "max": 6
+        }
+      }
+    },
+    "xray_shader_7": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_7.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 7,
+          "max": 7
+        }
+      }
+    },
+    "xray_shader_8": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_8.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 8,
+          "max": 8
+        }
+      }
+    },
+    "xray_shader_9": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_9.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 9,
+          "max": 9
+        }
+      }
+    },
+    "xray_shader_10": {
+      "type": "palladium:shader_effect",
+      "hidden": true,
+      "hidden_in_bar": true,
+      "shader": "powerborne:shaders/post/xray_shader_10.json",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:animation_timer_ability",
+          "ability": "xray_animation",
+          "min": 10,
+          "max": 10
+    }
+}
+        },
+"wheel": {
+"type": "palladium:ability_wheel",
+"title": "Колесо Способностей",
+"icon": {
+"type": "palladium:texture",
+"texture": "fortresheroes:textures/icons/doom_emblem.png"
+},
+"list_index": 4,
+ "gui_position": [1, 2.25],
+ "description": "Получите Ночное Зрение И Видите Сущностей Сквозь Стены",
+"hidden": false,
+"hidden_in_bar": false,
+"abilities": [
+"xray_animation",
+"night_vision"
+],
+"conditions": {
+"enabling": {
+"type": "palladium:held"
+},
+"unlocking": [
+{
+"type": "palladium:not",
+"conditions": {
+    "type": "palladium:has_effect",
+    "effect": "powerborne:solar_exhaustion"
+}
+}
+]
+}
+    },
+        "respiration": {
+      "type": "powerborne:respiration",
+      "hidden": true,
+      "multiplier": 10
+    },
+    "night_vision": {
+      "type": "palladium:command",
+      "icon": {
+        "type": "palladium:texture",
+        "texture": "minecraft:textures/mob_effect/night_vision.png"
+      },
+      "title": {
+        "translate": "effect.minecraft.night_vision"
+      },
+      "hidden": true,
+      "hidden_in_bar": true,
+      "last_tick_commands": "effect clear @s minecraft:night_vision",
+      "commands": "effect give @s minecraft:night_vision infinite 0 true",
+      "first_tick_commands": "",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:toggle"
+          }
+        ],
+        "unlocking": {
+          "type": "palladium:not",
+          "conditions": {
+            "type": "palladium:has_effect",
+            "effect": "powerborne:solar_exhaustion"
+          }
+        }
+      }
+},
+"water_steps": {
+    "type": "palladium:water_walk",
+    "icon": "minecraft:blaze_rod",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "conditions": {
+        "enabling": [
+           {
+    "type": "palladium:ability_enabled",
+    "power": "null",
+    "ability": "speed"
+}
+        ],
+        "unlocking": []
+    }
+},
+"saturation": {
+    "type": "palladium:command",
+    "icon": "minecraft:command_block",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "first_tick_commands": [
+      "effect give @s minecraft:saturation 200 255"
+    ],
+    "last_tick_commands": [],
+    "commands": [],
+    "conditions": {
+        "enabling": [
+          {
+    "type": "palladium:ability_enabled",
+    "power": "null",
+    "ability": "speed"
+}
+        ],
+        "unlocking": []
+    }
+},
+"jump_height": {
+    "type": "palladium:attribute_modifier",
+    "icon": "minecraft:iron_chestplate",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "attribute": "palladium:jump_power",
+    "amount": 2,
+    "operation": 0,
+    "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+    "conditions": {
+        "enabling": [
+                    {
+                     "type": "palladium:ability_enabled",
+                     "power": "null",
+                     "ability": "speed"
+                    }
+        ],
+        "unlocking": []
+    }
+},
+"explosive": {
+    "type": "palladium:energy_beam",
+    "icon": "fortresheroes:textures/icons/explosive.png",
+    "title": "Взрывная Мысль",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 2,
+    "gui_position": [1, 0.75],
+    "description": "Взорвите Область Силой Мысли Или При Наведении На Сущность Убейте Всех В Радиусе 20 Блоков",
+    "energy_beam": "example:energy_beam",
+    "damage_type": "null",
+    "damage": 10,
+    "max_distance": 60,
+    "speed": 0.04,
+    "set_on_fire_seconds": 0,
+    "cause_fire": true,
+    "smelt_blocks": true,
+    "commands_on_block_hit": [
+      "summon minecraft:tnt ~ ~ ~"
+    ],
+    "commands_on_entity_hit": [
+      "kill @e[limit=30,sort=nearest,type=!player,distance=..15]"
+    ],
+    "conditions": {
+        "enabling": [
+    {
+      "type": "palladium:activation",
+      "cooldown": 240,
+      "ticks": 25,
+      "key_type": "key_bind",
+      "needs_empty_hand": false,
+      "allow_scrolling_when_crouching": true
+    }
+        ],
+        "unlocking": []
+    }
+},
+"explosive_aim": {
+    "type": "palladium:aim",
+    "icon": "minecraft:blaze_rod",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "time": 10,
+    "arm": "main_arm",
+    "conditions": {
+        "enabling": [
+                    {
+                     "type": "palladium:ability_enabled",
+                     "power": "null",
+                     "ability": "explosive"
+                    }
+        ],
+        "unlocking": []
+    }
+},
+"explosive_sound":
+{
+      "type": "palladium:command",
+      "title": "explosive_sound",
+      "hidden": true,
+      "first_tick_commands": "playsound powerborne:mjolnir_fail player @a[distance=..30] ~ ~ ~ 2 0.9",
+      "last_tick_commands": "playsound powerborne:firestorm_charge_2 player @a[distance=..30] ~ ~ ~ 2 0.8",
+      "commands": "",
+      "conditions": {
+        "enabling": {
+          "type": "palladium:ability_enabled",
+          "ability": "explosive"
+}
+}
+},
+"god_mode": {
+    "type": "powerborne:god_mode",
+    "icon": "fortresheroes:textures/icons/death_laser.png",
+    "title": "Режим Бога",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 5,
+    "gui_position": [0, 3],
+    "description": "null",
+    "energy_bar_usage": {
+   "energy_bar": "energy_bar",
+   "amount": 0
+},
+    "conditions": {
+        "enabling": [
+                    {
+                     "type": "palladium:activation",
+                     "cooldown": 1200,
+                     "ticks": 200,
+                     "key_type": "key_bind",
+                     "needs_empty_hand": false,
+                     "allow_scrolling_when_crouching": true
+                    },
+        {
+          "type": "palladium:energy_bar",
+          "power": "null",
+          "energy_bar": "energy_bar",
+          "min": 0,
+          "max": 1200
+        }
+        ],
+        "unlocking": [
+                    {
+                     "type": "palladium:energy_bar",
+                     "power": "null",
+                     "energy_bar": "energy_bar",
+                     "min": 1200,
+                     "max": 1200
+                    }
+        ]
+    }
+},
+"tag_give": {
+    "type": "palladium:command",
+    "icon": "minecraft:command_block",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "first_tick_commands": [],
+    "last_tick_commands": [
+      "energybar value set @s fortresheroes:doom energy_bar 0"
+    ],
+    "commands": [],
+    "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:ability_enabled",
+            "power": "null",
+            "ability": "god_mode"
+          }
+        ],
+        "unlocking": []
+    }
+},
+"death_beam": {
+    "type": "palladium:energy_beam",
+    "icon": "fortresheroes:textures/icons/death_laser.png",
+    "title": "Смертельный Луч",
+    "bar_color": "light_gray",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 6,
+    "gui_position": "null",
+    "description": "Взрывайте Всё Вокруг",
+    "energy_beam": "fortresheroes:death_laser",
+    "damage_type": "null",
+    "damage": 5,
+    "max_distance": 40,
+    "speed": 0.5,
+    "set_on_fire_seconds": 4,
+    "cause_fire": true,
+    "smelt_blocks": false,
+    "commands_on_block_hit": [
+      "summon minecraft:tnt ~ ~ ~"
+    ],
+    "commands_on_entity_hit": [],
+    "conditions": {
+        "enabling": [
+         {
+          "type": "palladium:held",
+          "cooldown": 0,
+          "key_type": "key_bind",
+          "needs_empty_hand": false
+         }
+        ],
+        "unlocking": [
+          {
+          "type":"palladium:ability_enabled",
+          "ability": "god_mode"
+          }
+        ]
+      }
+    },
+    "teleport_sound": {
+        "type": "palladium:play_sound",
+        "icon": "minecraft:blaze_rod",
+        "title": "null",
+        "bar_color": "light_gray",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "list_index": -1,
+        "gui_position": "null",
+        "description": "null",
+        "sound": "powerborne:firestorm_charge_1",
+        "volume": 1,
+        "pitch": 1,
+        "looping": false,
+        "play_self": true,
+        "play_others": false,
+        "conditions": {
+            "enabling": [
+                            {
+                             "type": "palladium:ability_first_tick",
+                             "power": "null",
+                             "ability": "teleport"
+                            }
+            ],
+            "unlocking": []
+        }
+    },
+    "ability_remover": {
+        "type": "palladium:command",
+        "icon": "minecraft:command_block",
+        "title": "null",
+        "bar_color": "light_gray",
+        "hidden": true,
+        "hidden_in_bar": true,
+        "list_index": -1,
+        "gui_position": "null",
+        "description": "null",
+        "first_tick_commands": [],
+        "last_tick_commands": [],
+        "commands": [
+            "superpower remove fortresheroes:doom @s"
+        ],
+        "conditions": {
+            "enabling": [
+{
+  "type": "palladium:not",
+  "conditions": [
+  {
+"type": "palladium:item_in_slot",
+"item": {
+"item": "fortresheroes:doom_suit"
+},
+"slot": "chest"
+}
+  ]
+}
+            ],
+            "unlocking": []
+        }
+    }
+}
+    }

@@ -1,0 +1,5 @@
+{
+    "type": "palladium:skin_overlay",
+    "render_type": "solid",
+    "texture": "fortresheroes:textures/models/doomskin.png"
+}

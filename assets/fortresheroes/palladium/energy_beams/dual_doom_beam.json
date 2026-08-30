@@ -1,0 +1,54 @@
+[
+    {
+        "type": "palladium:lightning",
+        "body_part": "left_arm",
+        "segments": 10,
+        "frequency": 2,
+        "spread": 1.4,
+        "glow_color": "#1DBD18",
+        "core_color": "#DADBD7",
+        "rainbow": false,
+        "glow_opacity": 1,
+        "core_opacity": 1,
+        "bloom": 4,
+        "size": 1.3,
+        "normal_transparency": false,
+        "rotation": 3,
+        "rotation_speed": 10,
+        "visibility": {
+            "first_person": true,
+            "third_person": true
+        },
+        "offset": [
+            0,
+            -11,
+            0
+        ]
+    },
+        {
+            "type": "palladium:lightning",
+            "body_part": "right_arm",
+            "segments": 10,
+            "frequency": 2,
+            "spread": 1.4,
+            "glow_color": "#1DBD18",
+            "core_color": "#D4D6D1",
+            "rainbow": false,
+            "glow_opacity": 1,
+            "core_opacity": 1,
+            "bloom": 4,
+            "size": 1.3,
+            "normal_transparency": false,
+            "rotation": 3,
+            "rotation_speed": 10,
+            "visibility": {
+                "first_person": true,
+                "third_person": true
+            },
+            "offset": [
+                0,
+                -11,
+                0
+            ]
+        }
+]

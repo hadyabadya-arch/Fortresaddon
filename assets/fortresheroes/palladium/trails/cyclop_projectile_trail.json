@@ -1,0 +1,15 @@
+{
+  "type": "palladium:lightning",
+  "body_part": "head",
+  "spacing": 1,
+  "lifetime": 7,
+  "core_color": "#E45C5C",
+  "glow_color": "#E21912",
+  "amount": 1,
+  "size": 3,
+  "offset": [
+    0,
+    10,
+    0
+  ]
+}

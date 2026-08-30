@@ -1,0 +1,13 @@
+{
+    "schemaVersion": 1,
+    "authors": [
+        "KrabsCibula"
+    ],
+    "environment": "*",
+    "id": "fortresheroes",
+    "version": "1.0.0",
+    "name": "Fortres's Addon",
+    "description": "Add Marvel & Dc Heroes",
+    "icon": "logo.png",
+    "license": "All rights reserved"
+}

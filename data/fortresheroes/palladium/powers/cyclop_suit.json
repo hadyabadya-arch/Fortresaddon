@@ -1,0 +1,30 @@
+{
+    "name": "Doom",
+    "persistent_data": true,
+     "damage_multiplier": 2,
+    "background": "minecraft:textures/block/green_wool.png",
+    "icon": "fortresheroes:textures/icons/doom_icon.png",
+    "gui_display_type": "tree",
+    "abilities": {
+"power_activate": {
+    "type": "palladium:command",
+    "icon": "minecraft:command_block",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "first_tick_commands": [
+        "superpower add fortresheroes:cyclop_w_visor @s"
+    ],
+    "last_tick_commands": [],
+    "commands": [],
+    "conditions": {
+        "enabling": [],
+        "unlocking": []
+    }
+}
+    }
+}
